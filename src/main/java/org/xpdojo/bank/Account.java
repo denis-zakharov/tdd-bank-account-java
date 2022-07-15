@@ -32,4 +32,8 @@ public class Account {
         }
         return target.balance();
     }
+
+    public String report() {
+        return "";
+    }
 }
