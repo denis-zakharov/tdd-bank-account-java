@@ -20,9 +20,9 @@ public class AccountTest {
 
     @Test
     public void transferAnAmount() {
-        Account acc1 = new Account();
-        Account acc2 = new Account();
+        Account acc1 = new Account(new Money(200));
+        Account acc2 = new Account(new Money(100));
         Money targetTotal = acc1.trasfer(new Money(100), acc2);
-        assertThat(targetTotal).isEqualTo(new Money(100));
+        assertThat(targetTotal).isEqualTo(new Money(200));
     }
 }

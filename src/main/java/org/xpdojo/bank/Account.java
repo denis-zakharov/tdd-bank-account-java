@@ -26,6 +26,10 @@ public class Account {
     }
 
     public Money trasfer(Money m, Account target) {
+        if (m.quantity() <= money.quantity()) {
+            withdraw(m);
+            target.deposit(m);
+        }
         return target.balance();
     }
 }
