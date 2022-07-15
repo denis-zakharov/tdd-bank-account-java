@@ -1,5 +1,7 @@
 package org.xpdojo.bank;
 
+import java.util.Date;
+
 public class Account {
     private Money money;
 
@@ -34,6 +36,6 @@ public class Account {
     }
 
     public String report() {
-        return "";
+        return String.format("%s %s", new Date(), money);
     }
 }

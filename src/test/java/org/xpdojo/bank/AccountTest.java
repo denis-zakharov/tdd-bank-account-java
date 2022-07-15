@@ -2,8 +2,6 @@ package org.xpdojo.bank;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountTest {
@@ -28,9 +26,10 @@ public class AccountTest {
         assertThat(targetTotal).isEqualTo(new Money(200));
     }
 
-    @Test void testReport() {
+    @Test
+    void testReport() {
         Account account = new Account(new Money(100));
         String report = account.report();
-        assertThat(report).isEqualTo(new Date().toString());
+        assertThat(report.endsWith(account.balance().toString()));
     }
 }

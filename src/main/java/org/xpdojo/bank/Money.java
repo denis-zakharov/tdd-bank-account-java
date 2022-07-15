@@ -41,4 +41,9 @@ public class Money {
     public int hashCode() {
         return Objects.hash(qty);
     }
+
+    @Override
+    public String toString() {
+        return "EUR " + qty;
+    }
 }
