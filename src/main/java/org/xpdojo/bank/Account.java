@@ -24,4 +24,8 @@ public class Account {
         money = money.add(m.negate());
         return money;
     }
+
+    public Money trasfer(Money m, Account target) {
+        return target.balance();
+    }
 }

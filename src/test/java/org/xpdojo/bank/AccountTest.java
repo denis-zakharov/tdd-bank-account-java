@@ -17,4 +17,12 @@ public class AccountTest {
         Account account = new Account(new Money(100));
         assertThat(account.withdraw(new Money(100))).isEqualTo(new Money());
     }
+
+    @Test
+    public void transferAnAmount() {
+        Account acc1 = new Account();
+        Account acc2 = new Account();
+        Money targetTotal = acc1.trasfer(new Money(100), acc2);
+        assertThat(targetTotal).isEqualTo(new Money(100));
+    }
 }
