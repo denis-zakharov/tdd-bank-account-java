@@ -20,7 +20,8 @@ public class Account {
         return money;
     }
 
-    public Money withdraw(Money money) {
+    public Money withdraw(Money m) {
+        money = money.add(m.negate());
         return money;
     }
 }
