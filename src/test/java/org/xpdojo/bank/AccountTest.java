@@ -11,4 +11,10 @@ public class AccountTest {
         Money money = new Money(100);
         assertThat(account.deposit(money)).isEqualTo(money);
     }
+
+    @Test
+    public void withdrawAnAmountToDecreaseTheBanalce() {
+        Account account = new Account(new Money(100));
+        assertThat(account.withdraw(new Money(100))).isEqualTo(new Money());
+    }
 }

@@ -1,7 +1,15 @@
 package org.xpdojo.bank;
 
 public class Account {
-    private Money money = new Money();
+    private Money money;
+
+    public Account() {
+        this.money = new Money();
+    }
+
+    public Account(Money money) {
+        this.money = money;
+    }
 
     Money balance() {
         return money;
@@ -12,4 +20,7 @@ public class Account {
         return money;
     }
 
+    public Money withdraw(Money money) {
+        return money;
+    }
 }
