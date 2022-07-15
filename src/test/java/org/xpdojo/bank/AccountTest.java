@@ -8,6 +8,7 @@ public class AccountTest {
     @Test
     public void depositAnAmountToIncreaseTheBalance() {
         Account account = new Account();
-        assertThat(account.balance()).isEqualTo(new Money());
+        Money money = new Money(100);
+        assertThat(account.deposit(money)).isEqualTo(money);
     }
 }
